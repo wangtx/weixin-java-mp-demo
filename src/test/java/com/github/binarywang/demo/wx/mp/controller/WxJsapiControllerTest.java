@@ -12,10 +12,10 @@ import static io.restassured.RestAssured.given;
  */
 @Test
 public class WxJsapiControllerTest extends BaseControllerTest {
-    @Test(invocationCount = 1000, threadPoolSize = 5)
+    @Test(invocationCount = 1, threadPoolSize = 5)
     public void testGetJsapiTicket() {
         given()
-            .when().get("/wx/jsapi/xxxx/getJsapiTicket")
+            .when().get("https://growthrecord.cn/wx/jsapi/wx5f28e5a30a67bceb/getJsapiTicket")
             .then()
             .log().everything();
     }

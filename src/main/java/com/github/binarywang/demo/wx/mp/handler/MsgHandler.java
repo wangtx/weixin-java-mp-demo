@@ -25,6 +25,7 @@ public class MsgHandler extends AbstractHandler {
                                     Map<String, Object> context, WxMpService weixinService,
                                     WxSessionManager sessionManager) {
 
+        logger.info("消息处理器：msgType={}, event={}", wxMessage.getMsgType(), wxMessage.getEvent());
         if (!wxMessage.getMsgType().equals(XmlMsgType.EVENT)) {
             //TODO 可以选择将消息保存到本地
         }
